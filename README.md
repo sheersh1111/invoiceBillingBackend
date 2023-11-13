@@ -7,7 +7,7 @@
  
  npm run dev
 
-# Scheduling of Process Automation
+# Scheduling of Process Automation at morning 9 am
  Using node-cron
  You can view file cronTask.js and mail function in invoiceController.js
 
