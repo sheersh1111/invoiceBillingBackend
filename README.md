@@ -6,7 +6,18 @@
  npm i
  
  npm run dev
-
+# For creating invoices
+ 1. Go to Postman
+ 2. Do a post request at http//localhost:4000/invoice/create
+ 3. json body will look like:
+    {
+    "email":"xckdk@gmail.com",
+    "amount":120,
+    "deadline":{
+    "$date":"2023-10-01T09:00:00.000+00:00"
+    },
+    "paid":false
+    }
 # Scheduling of Process Automation at morning 9 am
  Using node-cron
  You can view file cronTask.js and mail function in invoiceController.js
