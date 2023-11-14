@@ -6,11 +6,9 @@
 
    ```bash
 
-   npm init
-   
-npm install
-
-npm run dev
+   npm init   
+   npm install
+   npm run dev
 
 # Scheduling Process Automation
 
