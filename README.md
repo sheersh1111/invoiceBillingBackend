@@ -1,32 +1,30 @@
-# invoiceBillingBackend
-# These are steps to configure
+# Invoice Billing Backend
 
- npm init
- 
- npm i
- 
- npm run dev
-# For creating invoices
- 1. Go to Postman
- 2. Do a post request at http//localhost:4000/invoice/create
- 3. json body will look like:
-    {
-    "email":"xckdk@gmail.com",
-    "amount":120,
-    "deadline":{
-    "$date":"2023-10-01T09:00:00.000+00:00"
-    },
-    "paid":false
-    }
-# Scheduling of Process Automation at morning 9 am
- Using node-cron
- You can view file cronTask.js and mail function in invoiceController.js
+## Project Setup
 
-# For testing with your own DB you can change the link to your own invoice cluster of mongoDB Atlas in .env file.
+1. Initialize the project:
 
-# Zapier 
-I have used Zapier for custom mail to user. You can go to zapier and create a new Zap and generate a custom web hook in the zap which will act as a trigger and do the email action. 
+   ```bash
 
-You can also give html templating in message you are providing as you will see in my mail function in invoiceController.js
+   npm init
+   
+npm install
 
+npm run dev
 
+# Scheduling Process Automation
+
+The project uses node-cron for scheduling tasks. Check the cronTask.js file for details. Process automation, such as sending emails, is handled in the invoiceController.js file.
+
+# Database Configuration
+
+For testing with your own MongoDB Atlas cluster, update the connection link in the .env file.
+
+# Zapier Integration
+Zapier is used for custom email notifications to users. Follow these steps:
+1. Create a new Zap in Zapier.
+2. Generate a custom webhook as a trigger.
+3. Set up an email action in Zapier.
+4. Customize the email content, including HTML templating, in the invoiceController.js file.
+
+Feel free to explore and modify the code based on your requirements. If you have any questions, please refer to the project documentation or reach out for assistance.
